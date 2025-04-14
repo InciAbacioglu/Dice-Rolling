@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main(void) {
+    int rolls[3];
+    int total = 0;
+
+    srand(time(NULL));
+
+    for (int i = 0; i < 3; i++) {
+        rolls[i] = (rand() % 6) + 1;
+        printf("Roll %d: %d\n", i + 1, rolls[i]);
+        total += rolls[i];
+    }
+
+    printf("Total roll: %d\n", total);
+
+    return 0;
+}
+
